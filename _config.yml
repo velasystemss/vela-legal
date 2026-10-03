@@ -1,0 +1,15 @@
+# The one place these values live. Change them here and every page follows.
+app_name: Vela
+contact_email: velalabss@gmail.com
+
+# The person responsible for the app and for the data it describes: an individual, not a company,
+# trading as Vela Systems.
+provider_name: Gokberk Şenel
+provider_trade_name: Vela Systems
+provider_place_tr: Ankara, Türkiye
+provider_place_en: Ankara, Türkiye
+last_updated_tr: 3 Ekim 2026
+last_updated_en: 3 October 2026
+
+exclude:
+  - README.md
