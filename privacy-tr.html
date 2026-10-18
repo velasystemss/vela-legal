@@ -15,9 +15,12 @@
 <h1>Gizlilik Politikası</h1>
 <p class="meta">{{ site.app_name }} uygulaması · Son güncelleme: {{ site.last_updated_tr }}</p>
 
-<p class="lead">Kısaca: girdiğin her şey telefonunda kalır. Hesap yoktur, sunucumuz yoktur, analitik
-ve takip yoktur; hiçbir veri satılmaz veya paylaşılmaz. Telefonundan çıkan şeyler yalnızca Apple'a
-gider: aradığın yer (Apple Haritalar) ve Apple'ın yürüttüğü satın alman.</p>
+<p class="lead">Kısaca: girdiğin her şey telefonunda kalır. Hesap yoktur, sunucumuz yoktur,
+analitik yoktur; hiçbir veri satılmaz. Telefonundan çıkanlar yalnızca şunlardır: aradığın yer ve
+satın alman için Apple'a gidenler, ve uygulamayı reklamla tanıttığımızda hangi reklamın işe
+yaradığını ölçen beş olay — kurulum, açılış, tanıtımın tamamlanması, deneme başlangıcı ve
+abonelik. Bu olaylarda doğum bilgilerin, adın veya sözlerin yer almaz
+(bkz. <a href="#reklam-olcumu">Reklam ölçümü</a>).</p>
 
 <h2>Veri sorumlusu</h2>
 <p>{{ site.provider_name }} ({{ site.provider_trade_name }}), bireysel geliştirici, {{ site.provider_place_tr }}.
@@ -44,9 +47,10 @@ verisi istemiyoruz. Uygulamanın konum izni yoktur; nerede olduğunu sormaz.</p>
 
 <h2>Yapmadıklarımız</h2>
 <p>Hesap ve giriş yoktur. Verilerini tutan bir sunucumuz yoktur ve hiçbir şeyin kopyasını
-saklamayız. Analitik aracı, çökme takip servisi, reklam, reklam kimliği ve üçüncü taraf yazılım
-geliştirme kiti (SDK) kullanmayız; seni uygulamalar veya web siteleri arasında takip etmeyiz.
-Hiçbir veriyi satmayız ve paylaşmayız.</p>
+saklamayız. Uygulamada reklam gösterilmez. Reklam kimliğini (IDFA) okumayız ve &ldquo;Uygulamanın
+seni izlemesine izin ver&rdquo; sorusunu hiçbir zaman sormayız. Analitik aracı ve çökme takip
+servisi kullanmayız. Hiçbir veriyi satmayız ve pazarlama için kimseyle paylaşmayız. Aşağıda
+anlatılan reklam ölçümü dışında, seni uygulamalar veya web siteleri arasında takip etmeyiz.</p>
 
 <h2>Telefonundan ne çıkar</h2>
 <ul>
@@ -66,6 +70,29 @@ Hiçbir veriyi satmayız ve paylaşmayız.</p>
 </ul>
 <p>Uygulamanın bu sürümü hiçbir içerik dosyası indirmez; uygulama hiçbir zaman kod indirip
 çalıştırmaz. Hesaplamayı yapan program uygulamanın içinde gelir.</p>
+
+<h2 id="reklam-olcumu">Reklam ölçümü</h2>
+<p>Uygulamayı Instagram, Facebook ve TikTok'ta tanıttığımızda, hangi reklamın işe yaradığını
+görebilmek için Meta'nın ve TikTok'un ölçüm kitaplıkları uygulamada yer alır.</p>
+<p><strong>Ne gönderilir.</strong> Yalnızca beş olay, her biri en fazla bir kez: kurulum,
+uygulamanın açılması, tanıtımın tamamlanması, deneme süresinin başlaması ve aboneliğin satın
+alınması. Son ikisine, App Store'dan gelen şu üç bilgi eklenir: hangi abonelik planı (ürün kodu),
+fiyatı ve para birimi.</p>
+<p><strong>Ne gönderilmez.</strong> Adın, doğum tarihin, doğum saatin, doğum yerin, haritan, odak
+alanların, gördüğün ya da kaydettiğin sözler ve diğer her şey. Bir olayın taşıyabileceği bilgiler
+uygulamanın kaynak kodunda üç maddelik bir listedir ve bu listenin dışına çıkılamayacağı
+testlerle sabittir.</p>
+<p><strong>İzleme izni istenmez.</strong> Reklam kimliğin (IDFA) okunmaz; ölçüm, Apple'ın
+SKAdNetwork'ü ve Meta'nın toplu ölçüm yöntemi ile yapılır. Bunlar kişi kişi değil, toplu olarak
+çalışır ve izin gerektirmez. İki kitaplığın kendi otomatik kayıt tutma özellikleri &mdash; satın
+almaları App Store makbuzundan okuyan bölümler dâhil &mdash; kapatılmıştır; yukarıdaki beş olay
+dışında hiçbir şey gönderilmez.</p>
+<p><strong>Bir kampanya yürütmüyorsak.</strong> Bu kitaplıklar uygulamanın içinde durur ama hiç
+başlatılmaz: hiçbir şey çalıştırmaz, hiçbir şey saklamaz ve hiçbir yere bağlanmazlar.</p>
+<p><strong>Silme.</strong> <strong>Verilerimi sil</strong>, bu kitaplıkların telefonunda tuttuğu
+her şeyi de siler. Daha önce gönderilmiş olaylar Meta'nın ve TikTok'un sunucularındadır ve
+uygulamadan geri alınamaz; bunlar için doğrudan onlara başvurman gerekir. Meta'nın ve TikTok'un
+kendi gizlilik politikaları bu veriler için geçerlidir.</p>
 
 <h2>Bildirimler</h2>
 <p>İki bildirim vardır; ikisi de isteğe bağlıdır ve Sen sekmesinde her birinin kendi anahtarı
@@ -91,7 +118,9 @@ Tüzüğü'nün (GDPR) sana tanıdığı haklar da geçerlidir.</p>
 işlenmesini kısıtlama veya itiraz etme ve verilerini taşınabilir biçimde alma hakları vardır.
 Verilerin yalnızca telefonunda bulunduğu için bu hakları doğrudan uygulamada kullanırsın: her şey
 Sen sekmesinde görünür ve değiştirilebilir, silme, abonelik olsun olmasın, tek dokunuşla yapılır. Bizim tarafımızda hakkında
-hiçbir kişisel veri yoktur. Her türlü soru için {{ site.contact_email }} adresine yazabilirsin.</p>
+hiçbir kişisel veri yoktur. <a href="#reklam-olcumu">Reklam ölçümü</a> bölümünde anlatılan olaylar
+Meta'ya ve TikTok'a gider; bunlar için onların gizlilik politikaları ve veri sahibi haklarına
+ilişkin kendi süreçleri geçerlidir. Her türlü soru için {{ site.contact_email }} adresine yazabilirsin.</p>
 <p>Ayrıca bir denetim makamına şikâyette bulunabilirsin: Türkiye'de Kişisel Verileri Koruma
 Kurumu'na; AB veya AEA'da ise yaşadığın yerin veri koruma makamına.</p>
 
@@ -100,8 +129,8 @@ Kurumu'na; AB veya AEA'da ise yaşadığın yerin veri koruma makamına.</p>
 onlardan bilerek veri toplamayız; zaten kendi tarafımızda hiç veri toplamıyoruz.</p>
 
 <h2>Değişiklikler</h2>
-<p>Bu politikayı değiştirirsek bu sayfayı ve üstteki tarihi güncelleriz. Verilerin telefondan
-çıkmaya başlayacak olursa, bunu önceden burada açıkça yazarız.</p>
+<p>Bu politikayı değiştirirsek bu sayfayı ve üstteki tarihi güncelleriz. Telefonundan çıkan
+şeyler değişecek olursa, bunu önceden burada açıkça yazarız.</p>
 
 <h2>İletişim</h2>
 <p>{{ site.provider_name }} ({{ site.provider_trade_name }}), {{ site.provider_place_tr }} ·

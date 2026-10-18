@@ -16,9 +16,11 @@
 <p class="meta">{{ site.app_name }} app · Last updated: {{ site.last_updated_en }}</p>
 
 <p class="lead">In short: everything you enter stays on your phone. There is no account, no server
-of ours, no analytics and no tracking, and nothing is sold or shared. The only things that leave
-your phone go to Apple: the place you search for (Apple Maps), and your purchase, which Apple
-handles.</p>
+of ours and no analytics, and nothing is sold. Only two kinds of thing leave your phone: what goes
+to Apple for the place you search for and for your purchase, and &mdash; when we advertise the app
+&mdash; five events that measure which ad worked: the install, the app being opened, finishing the
+introduction, a trial starting and a subscription. Those events carry none of your birth details,
+your name or your quotes (see <a href="#ad-measurement">Ad measurement</a>).</p>
 
 <h2>Who is responsible</h2>
 <p>{{ site.provider_name }} ({{ site.provider_trade_name }}), an individual developer,
@@ -51,9 +53,11 @@ are.</p>
 
 <h2>What we do not do</h2>
 <p>There is no account and no sign-in. We run no server that holds your data, and we keep no copy
-of anything. We use no analytics, no crash-reporting service, no advertising, no advertising
-identifier and no third-party SDKs, and we do not track you across apps or websites. We do not sell
-or share any data.</p>
+of anything. There are no ads inside the app. We never read your advertising identifier (IDFA) and
+never show the &ldquo;Allow this app to track you&rdquo; prompt. We use no analytics and no
+crash-reporting service. We do not sell any data, and we share none of it with anyone for
+marketing. Apart from the ad measurement described below, we do not track you across apps or
+websites.</p>
 
 <h2>What leaves your phone</h2>
 <ul>
@@ -73,6 +77,29 @@ or share any data.</p>
 </ul>
 <p>This version of the app downloads no content files, and the app never downloads or runs code:
 the program that does the calculations ships inside the app.</p>
+
+<h2 id="ad-measurement">Ad measurement</h2>
+<p>When we advertise the app on Instagram, Facebook or TikTok, Meta's and TikTok's measurement
+libraries are included in the app so that we can tell which ad worked.</p>
+<p><strong>What is sent.</strong> Five events, each at most once: the install, the app being
+opened, finishing the introduction, a free trial starting, and a subscription being bought. The
+last two also carry three things, all from the App Store: which plan it was (the product
+identifier), its price, and the currency.</p>
+<p><strong>What is not sent.</strong> Your name, your birth date, your birth time, your birth
+place, your chart, your focus areas, the quotes you read or saved, and everything else. What an
+event may carry is a three-item list in the app's source code, and tests make it impossible to go
+beyond that list.</p>
+<p><strong>No tracking permission is requested.</strong> Your advertising identifier (IDFA) is
+never read. Measurement uses Apple's SKAdNetwork and Meta's aggregated measurement, which work in
+aggregate rather than person by person and need no permission. Both libraries' own automatic
+logging &mdash; including the parts that read purchases from the App Store receipt &mdash; is
+switched off, so nothing beyond the five events above is sent.</p>
+<p><strong>When we are not running a campaign.</strong> The libraries sit in the app but are never
+started: they run nothing, store nothing and connect to nothing.</p>
+<p><strong>Deleting.</strong> <strong>Delete my data</strong> also clears everything these
+libraries keep on your phone. Events already sent are on Meta's and TikTok's servers and cannot be
+recalled from the app; for those you would need to contact them directly. Meta's and TikTok's own
+privacy policies apply to that data.</p>
 
 <h2>Notifications</h2>
 <p>There are two, both optional, each with its own switch in the app's You tab: the morning quote,
@@ -98,7 +125,9 @@ the rights the General Data Protection Regulation (GDPR) gives you.</p>
 to restrict or object to its processing, and to receive it in a portable form. Because your data
 exists only on your phone, you exercise them directly in the app: everything is visible and
 editable in the You tab, and deletion takes one tap, with or without a subscription. We hold no personal data about you on our
-side. For any question, write to {{ site.contact_email }}.</p>
+side. The events described under <a href="#ad-measurement">Ad measurement</a> go to Meta and
+TikTok; their own privacy policies, and their own processes for data-subject requests, apply to
+those. For any question, write to {{ site.contact_email }}.</p>
 <p>You may also complain to a supervisory authority: in Türkiye, the Personal Data Protection
 Authority (Kişisel Verileri Koruma Kurumu); in the EU or EEA, the data protection authority where
 you live.</p>
@@ -108,8 +137,8 @@ you live.</p>
 we do not knowingly collect data from them; we collect none on our side at all.</p>
 
 <h2>Changes</h2>
-<p>If we change this policy we will update this page and the date above. If your data ever starts
-leaving the phone, we will say so here plainly, before it happens.</p>
+<p>If we change this policy we will update this page and the date above. If what leaves your phone
+ever changes, we will say so here plainly, before it happens.</p>
 
 <h2>Contact</h2>
 <p>{{ site.provider_name }} ({{ site.provider_trade_name }}), {{ site.provider_place_en }} ·
