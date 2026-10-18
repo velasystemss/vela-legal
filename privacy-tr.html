@@ -19,7 +19,8 @@
 analitik yoktur; hiçbir veri satılmaz. Telefonundan çıkanlar yalnızca şunlardır: aradığın yer ve
 satın alman için Apple'a gidenler, ve uygulamayı reklamla tanıttığımızda hangi reklamın işe
 yaradığını ölçen beş olay — kurulum, açılış, tanıtımın tamamlanması, deneme başlangıcı ve
-abonelik. Bu olaylarda doğum bilgilerin, adın veya sözlerin yer almaz
+abonelik. Bu olaylarda doğum bilgilerin, adın veya sözlerin yer almaz. Reklam kimliğinin
+kullanılması için ayrıca iznini isteriz; vermezsen uygulama aynen çalışır
 (bkz. <a href="#reklam-olcumu">Reklam ölçümü</a>).</p>
 
 <h2>Veri sorumlusu</h2>
@@ -47,9 +48,9 @@ verisi istemiyoruz. Uygulamanın konum izni yoktur; nerede olduğunu sormaz.</p>
 
 <h2>Yapmadıklarımız</h2>
 <p>Hesap ve giriş yoktur. Verilerini tutan bir sunucumuz yoktur ve hiçbir şeyin kopyasını
-saklamayız. Uygulamada reklam gösterilmez. Reklam kimliğini (IDFA) okumayız ve &ldquo;Uygulamanın
-seni izlemesine izin ver&rdquo; sorusunu hiçbir zaman sormayız. Analitik aracı ve çökme takip
-servisi kullanmayız. Hiçbir veriyi satmayız ve pazarlama için kimseyle paylaşmayız. Aşağıda
+saklamayız. Uygulamada reklam gösterilmez. Reklam kimliğini (IDFA) yalnızca sen açıkça izin
+verirsen ve yalnızca aşağıdaki reklam ölçümü için kullanırız; izin vermezsen hiç okunmaz. Analitik
+aracı ve çökme takip servisi kullanmayız. Hiçbir veriyi satmayız ve pazarlama için kimseyle paylaşmayız. Aşağıda
 anlatılan reklam ölçümü dışında, seni uygulamalar veya web siteleri arasında takip etmeyiz.</p>
 
 <h2>Telefonundan ne çıkar</h2>
@@ -82,11 +83,21 @@ fiyatı ve para birimi.</p>
 alanların, gördüğün ya da kaydettiğin sözler ve diğer her şey. Bir olayın taşıyabileceği bilgiler
 uygulamanın kaynak kodunda üç maddelik bir listedir ve bu listenin dışına çıkılamayacağı
 testlerle sabittir.</p>
-<p><strong>İzleme izni istenmez.</strong> Reklam kimliğin (IDFA) okunmaz; ölçüm, Apple'ın
-SKAdNetwork'ü ve Meta'nın toplu ölçüm yöntemi ile yapılır. Bunlar kişi kişi değil, toplu olarak
-çalışır ve izin gerektirmez. İki kitaplığın kendi otomatik kayıt tutma özellikleri &mdash; satın
-almaları App Store makbuzundan okuyan bölümler dâhil &mdash; kapatılmıştır; yukarıdaki beş olay
-dışında hiçbir şey gönderilmez.</p>
+<p><strong>İzin sorusu.</strong> Ücretsiz sözden sonra, abonelik ekranından önce, kurulum başına
+bir kez &ldquo;Reklamlarımızı ölçmemize yardım eder misin?&rdquo; diye soran bir ekran gelir;
+<strong>Devam</strong>'a dokunduğunda iPhone'un kendi izleme izni sorusu çıkar.</p>
+<ul>
+<li><strong>İzin verirsen:</strong> reklam kimliğin (IDFA) ölçümde kullanılabilir ve hangi
+reklamın işe yaradığı daha kesin görülür.</li>
+<li><strong>İzin vermezsen, ya da hiç sorulmazsa:</strong> uygulama aynen çalışır. Hiçbir ekran,
+hiçbir özellik değişmez; aynı beş olay gönderilmeye devam eder, ama reklam kimliğin okunmaz.
+Ölçüm o zaman Apple'ın SKAdNetwork'ü ve Meta'nın toplu ölçüm yöntemi ile, kişi kişi değil toplu
+olarak yapılır.</li>
+</ul>
+<p>İzni istediğin zaman Ayarlar &rarr; Gizlilik ve Güvenlik &rarr; İzleme bölümünden geri
+alabilirsin. İki kitaplığın kendi otomatik kayıt tutma özellikleri &mdash; satın almaları App
+Store makbuzundan okuyan bölümler dâhil &mdash; kapatılmıştır; yukarıdaki beş olay dışında hiçbir
+şey gönderilmez.</p>
 <p><strong>Bir kampanya yürütmüyorsak.</strong> Bu kitaplıklar uygulamanın içinde durur ama hiç
 başlatılmaz: hiçbir şey çalıştırmaz, hiçbir şey saklamaz ve hiçbir yere bağlanmazlar.</p>
 <p><strong>Silme.</strong> <strong>Verilerimi sil</strong>, bu kitaplıkların telefonunda tuttuğu

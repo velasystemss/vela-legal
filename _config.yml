@@ -8,8 +8,8 @@ provider_name: Gokberk Şenel
 provider_trade_name: Vela Systems
 provider_place_tr: Ankara, Türkiye
 provider_place_en: Ankara, Türkiye
-last_updated_tr: 18 Ekim 2026
-last_updated_en: 18 October 2026
+last_updated_tr: 19 Ekim 2026
+last_updated_en: 19 October 2026
 
 exclude:
   - README.md

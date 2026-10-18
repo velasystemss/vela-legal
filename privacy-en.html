@@ -20,7 +20,8 @@ of ours and no analytics, and nothing is sold. Only two kinds of thing leave you
 to Apple for the place you search for and for your purchase, and &mdash; when we advertise the app
 &mdash; five events that measure which ad worked: the install, the app being opened, finishing the
 introduction, a trial starting and a subscription. Those events carry none of your birth details,
-your name or your quotes (see <a href="#ad-measurement">Ad measurement</a>).</p>
+your name or your quotes. We ask separately before using your advertising identifier, and the app
+works the same if you say no (see <a href="#ad-measurement">Ad measurement</a>).</p>
 
 <h2>Who is responsible</h2>
 <p>{{ site.provider_name }} ({{ site.provider_trade_name }}), an individual developer,
@@ -53,9 +54,9 @@ are.</p>
 
 <h2>What we do not do</h2>
 <p>There is no account and no sign-in. We run no server that holds your data, and we keep no copy
-of anything. There are no ads inside the app. We never read your advertising identifier (IDFA) and
-never show the &ldquo;Allow this app to track you&rdquo; prompt. We use no analytics and no
-crash-reporting service. We do not sell any data, and we share none of it with anyone for
+of anything. There are no ads inside the app. Your advertising identifier (IDFA) is used only if
+you explicitly allow it, and only for the ad measurement described below; say no and it is never
+read. We use no analytics and no crash-reporting service. We do not sell any data, and we share none of it with anyone for
 marketing. Apart from the ad measurement described below, we do not track you across apps or
 websites.</p>
 
@@ -89,11 +90,21 @@ identifier), its price, and the currency.</p>
 place, your chart, your focus areas, the quotes you read or saved, and everything else. What an
 event may carry is a three-item list in the app's source code, and tests make it impossible to go
 beyond that list.</p>
-<p><strong>No tracking permission is requested.</strong> Your advertising identifier (IDFA) is
-never read. Measurement uses Apple's SKAdNetwork and Meta's aggregated measurement, which work in
-aggregate rather than person by person and need no permission. Both libraries' own automatic
-logging &mdash; including the parts that read purchases from the App Store receipt &mdash; is
-switched off, so nothing beyond the five events above is sent.</p>
+<p><strong>The permission question.</strong> After the free quote and before the subscription
+screen, once per install, a screen asks &ldquo;Help us measure our ads?&rdquo;; tapping
+<strong>Continue</strong> brings up the iPhone's own tracking permission question.</p>
+<ul>
+<li><strong>If you allow it:</strong> your advertising identifier (IDFA) may be used in the
+measurement, and which ad worked can be seen more exactly.</li>
+<li><strong>If you say no, or are never asked:</strong> the app works the same. No screen and no
+feature changes; the same five events are still sent, but your advertising identifier is not
+read. Measurement then uses Apple's SKAdNetwork and Meta's aggregated measurement, which work in
+aggregate rather than person by person.</li>
+</ul>
+<p>You can take the permission back at any time in Settings &rarr; Privacy &amp; Security &rarr;
+Tracking. Both libraries' own automatic logging &mdash; including the parts that read purchases
+from the App Store receipt &mdash; is switched off, so nothing beyond the five events above is
+sent.</p>
 <p><strong>When we are not running a campaign.</strong> The libraries sit in the app but are never
 started: they run nothing, store nothing and connect to nothing.</p>
 <p><strong>Deleting.</strong> <strong>Delete my data</strong> also clears everything these
