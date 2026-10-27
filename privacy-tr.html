@@ -15,13 +15,18 @@
 <h1>Gizlilik Politikası</h1>
 <p class="meta">{{ site.app_name }} uygulaması · Son güncelleme: {{ site.last_updated_tr }}</p>
 
-<p class="lead">Kısaca: girdiğin her şey telefonunda kalır. Hesap yoktur, sunucumuz yoktur,
+{% if site.ads_live %}<p class="lead">Kısaca: girdiğin her şey telefonunda kalır. Hesap yoktur, sunucumuz yoktur,
 analitik yoktur; hiçbir veri satılmaz. Telefonundan çıkanlar yalnızca şunlardır: aradığın yer ve
 satın alman için Apple'a gidenler, ve uygulamayı reklamla tanıttığımızda hangi reklamın işe
 yaradığını ölçen beş olay — kurulum, açılış, tanıtımın tamamlanması, deneme başlangıcı ve
 abonelik. Bu olaylarda doğum bilgilerin, adın veya sözlerin yer almaz. Reklam kimliğinin
 kullanılması için ayrıca iznini isteriz; vermezsen uygulama aynen çalışır
-(bkz. <a href="#reklam-olcumu">Reklam ölçümü</a>).</p>
+(bkz. <a href="#reklam-olcumu">Reklam ölçümü</a>).</p>{% else %}
+<p class="lead">Kısaca: girdiğin her şey telefonunda kalır. Eklediğin kişilerin doğum bilgileri
+de dahil. Hesap yoktur, sunucumuz yoktur, analitik yoktur; hiçbir veri satılmaz. Telefonundan
+çıkanlar yalnızca aradığın yer ve satın alman için Apple'a gidenlerdir. Reklam için hiçbir şey
+gönderilmez.</p>
+{% endif %}
 
 <h2>Veri sorumlusu</h2>
 <p>{{ site.provider_name }} ({{ site.provider_trade_name }}), bireysel geliştirici, {{ site.provider_place_tr }}.
@@ -39,12 +44,24 @@ kullanılması için ayrıca iznini isteriz; vermezsen uygulama aynen çalışı
   <li><strong>Ayarların</strong>: bildirim anahtarları ve saati, uygulamanın dili.</li>
   <li><strong>İçerik geçmişin</strong>: doğum haritan, senin için hesaplanan günlük sözler ve
       haftalık yorumlar, tekrar etmesin diye daha önce gördüğün sözler.</li>
+  <li><strong>Eklediğin kişiler.</strong> Aranızdaki uyumu görmek için başka kişileri
+      ekleyebilirsin. Her biri için: adı ya da takma adı, doğum tarihi ve — yalnızca sen
+      girersen — doğum saati ve doğum yeri, o kişinin sana ne olduğu (sevgili, arkadaş, kardeş,
+      iş arkadaşı gibi) ve istersen cinsiyeti. Saati, yeri ve cinsiyeti boş bırakabilirsin;
+      uygulama yine çalışır. Bu kişilerden kurduğun gruplar da aynı şekilde saklanır.
+      <strong>Bunlar tam olarak senin kendi doğum bilgilerinle aynı yerde ve aynı kurallarla
+      durur: bu telefonda, hiçbir yere gönderilmeden, ve "Verilerimi sil" ile birlikte
+      silinerek.</strong> Yalnızca uygulamadaki uyumu hesaplamak için okunur. Biz hiçbir zaman
+      görmeyiz. Uyumdan ürettiğin paylaşım kartında yalnızca ad ya da takma ad, burç adları, puan
+      ve kartın kendi metni bulunur — doğum tarihi, saati, yeri veya cinsiyet asla yer almaz.</li>
 </ul>
 <p>Bunlar uygulamanın kendi alanında ve ana ekran widget'ının okuduğu, aynı telefondaki paylaşılan
 alanda durur. Doğum bilgilerin, içeriğin ve favorilerin telefonun yedeklerine girmez. Her şey
 telefonda hesaplanır.</p>
-<p>Başka hiçbir şey. E-posta adresi, telefon numarası, cinsiyet, kişi listesi, fotoğraf veya sağlık
-verisi istemiyoruz. Uygulamanın konum izni yoktur; nerede olduğunu sormaz.</p>
+<p>Başka hiçbir şey. E-posta adresi, telefon numarası, fotoğraf veya sağlık verisi istemiyoruz.
+Uygulamanın konum izni yoktur; nerede olduğunu sormaz ve telefonundaki rehberi hiçbir zaman
+okumaz — başka birinin bilgileri uygulamaya yalnızca sen yukarıda anlatıldığı gibi kendin
+girersen girer.</p>
 
 <h2>Yapmadıklarımız</h2>
 <p>Hesap ve giriş yoktur. Verilerini tutan bir sunucumuz yoktur ve hiçbir şeyin kopyasını
@@ -72,9 +89,12 @@ anlatılan reklam ölçümü dışında, seni uygulamalar veya web siteleri aras
 <p>Uygulamanın bu sürümü hiçbir içerik dosyası indirmez; uygulama hiçbir zaman kod indirip
 çalıştırmaz. Hesaplamayı yapan program uygulamanın içinde gelir.</p>
 
+{% if site.ads_live %}
 <h2 id="reklam-olcumu">Reklam ölçümü</h2>
-<p>Uygulamayı Instagram, Facebook ve TikTok'ta tanıttığımızda, hangi reklamın işe yaradığını
-görebilmek için Meta'nın ve TikTok'un ölçüm kitaplıkları uygulamada yer alır.</p>
+<p>Uygulamayı Instagram ve Facebook'ta tanıttığımızda, hangi reklamın işe yaradığını görebilmek
+için Meta'nın ölçüm kitaplığı uygulamada yer alır. TikTok'un kitaplığı da uygulamanın içindedir
+ama <strong>bu sürümde açık değildir</strong>: hiçbir ayar verilmediği için hiç başlatılmaz,
+hiçbir şey saklamaz ve hiçbir yere bağlanmaz. Bu değişirse bu sayfa da değişir.</p>
 <p><strong>Ne gönderilir.</strong> Yalnızca beş olay, her biri en fazla bir kez: kurulum,
 uygulamanın açılması, tanıtımın tamamlanması, deneme süresinin başlaması ve aboneliğin satın
 alınması. Son ikisine, App Store'dan gelen şu üç bilgi eklenir: hangi abonelik planı (ürün kodu),
@@ -98,13 +118,15 @@ olarak yapılır.</li>
 alabilirsin. İki kitaplığın kendi otomatik kayıt tutma özellikleri &mdash; satın almaları App
 Store makbuzundan okuyan bölümler dâhil &mdash; kapatılmıştır; yukarıdaki beş olay dışında hiçbir
 şey gönderilmez.</p>
-<p><strong>Bir kampanya yürütmüyorsak.</strong> Bu kitaplıklar uygulamanın içinde durur ama hiç
-başlatılmaz: hiçbir şey çalıştırmaz, hiçbir şey saklamaz ve hiçbir yere bağlanmazlar.</p>
-<p><strong>Silme.</strong> <strong>Verilerimi sil</strong>, bu kitaplıkların telefonunda tuttuğu
-her şeyi de siler. Daha önce gönderilmiş olaylar Meta'nın ve TikTok'un sunucularındadır ve
-uygulamadan geri alınamaz; bunlar için doğrudan onlara başvurman gerekir. Meta'nın ve TikTok'un
-kendi gizlilik politikaları bu veriler için geçerlidir.</p>
+<p><strong>TikTok'un kitaplığı.</strong> Uygulamanın içinde durur ve hiç başlatılmaz: hiçbir şey
+çalıştırmaz, hiçbir şey saklamaz ve hiçbir yere bağlanmaz. Bu sürümde yalnızca Meta'nın kitaplığı
+çalışır.</p>
+<p><strong>Silme.</strong> <strong>Verilerimi sil</strong>, bu kitaplığın telefonunda tuttuğu
+her şeyi de siler. Daha önce gönderilmiş olaylar Meta'nın sunucularındadır ve uygulamadan geri
+alınamaz; bunlar için doğrudan Meta'ya başvurman gerekir. Meta'nın kendi gizlilik politikası bu
+veriler için geçerlidir.</p>
 
+{% endif %}
 <h2>Bildirimler</h2>
 <p>İki bildirim vardır; ikisi de isteğe bağlıdır ve Sen sekmesinde her birinin kendi anahtarı
 vardır: her sabah seçtiğin saatte günün sözü ve her pazar akşamı haftalık yorum. Telefon bunları
@@ -114,7 +136,8 @@ istenir.</p>
 
 <h2>Verilerini silmek</h2>
 <p>Sen sekmesindeki ve abonelik ekranının altındaki <strong>Verilerimi sil</strong>, yukarıda sayılan her şeyi telefondan siler:
-doğum bilgilerini, haritanı, hesaplanmış içeriğini ve geçmişini, favorilerini, widget'ın kopyasını,
+doğum bilgilerini, haritanı, <strong>eklediğin bütün kişileri ve kurduğun bütün grupları</strong>,
+hesaplanmış içeriğini ve geçmişini, kayıtlı gökyüzü olaylarını, favorilerini, widget'ın kopyasını,
 ayarlarını ve planlanmış bildirimleri. Bu işlem hemen gerçekleşir ve geri alınamaz; uygulama ilk
 kurulduğu haline döner. Uygulamayı silmek de hepsini siler.</p>
 <p>Bizden talep etmen gereken bir şey yoktur: bizde hiçbir veri yoktur, silinecek bir hesap da
@@ -130,8 +153,8 @@ işlenmesini kısıtlama veya itiraz etme ve verilerini taşınabilir biçimde a
 Verilerin yalnızca telefonunda bulunduğu için bu hakları doğrudan uygulamada kullanırsın: her şey
 Sen sekmesinde görünür ve değiştirilebilir, silme, abonelik olsun olmasın, tek dokunuşla yapılır. Bizim tarafımızda hakkında
 hiçbir kişisel veri yoktur. <a href="#reklam-olcumu">Reklam ölçümü</a> bölümünde anlatılan olaylar
-Meta'ya ve TikTok'a gider; bunlar için onların gizlilik politikaları ve veri sahibi haklarına
-ilişkin kendi süreçleri geçerlidir. Her türlü soru için {{ site.contact_email }} adresine yazabilirsin.</p>
+Meta'ya gider; bunlar için Meta'nın gizlilik politikası ve veri sahibi haklarına ilişkin kendi
+süreci geçerlidir. Her türlü soru için {{ site.contact_email }} adresine yazabilirsin.</p>
 <p>Ayrıca bir denetim makamına şikâyette bulunabilirsin: Türkiye'de Kişisel Verileri Koruma
 Kurumu'na; AB veya AEA'da ise yaşadığın yerin veri koruma makamına.</p>
 

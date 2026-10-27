@@ -11,5 +11,18 @@ provider_place_en: Ankara, Türkiye
 last_updated_tr: 19 Ekim 2026
 last_updated_en: 19 October 2026
 
+# Whether this build of the app actually ships the Meta and TikTok measurement SDKs — that is,
+# whether META_APP_ID and TIKTOK_APP_ID are filled in in ios/Config/Base.xcconfig.
+#
+# false  → the ad-measurement sections are left out of both privacy pages entirely, and the
+#          summary says plainly that nothing is sent for advertising. This is correct for a build
+#          with those ids empty, where neither SDK initialises and the tracking prompt is never
+#          shown.
+# true   → the ad-measurement sections are published and the summary names them.
+#
+# Flip this in the same commit as the build that changes it, and never before: a policy that
+# describes measurement the app is not doing is as wrong as one that hides measurement it is.
+ads_live: true
+
 exclude:
   - README.md
